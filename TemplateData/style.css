@@ -1,0 +1,40 @@
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas { background: #231F20 }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo {
+    width: 210px; /* 300px * 0.7 */
+    height: 29.4px; /* 42px * 0.7 */
+    background: url('arcus.png') no-repeat center;
+    background-size: contain; /* 確保圖片不會被裁切 */
+    transform: scale(0.7); /* 等比縮小為70% */
+}
+#unity-progress-bar-empty {
+    position: relative;
+    width: 141px;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 6.5px;
+    background: url('progress-bar-empty-light.png') no-repeat center;
+    border-radius: 9px; /* 設置圓角 */
+    overflow: hidden; /* 確保內部元素不會超出圓角邊界 */
+}
+
+#unity-progress-bar-full {
+    position: absolute;
+    width: 0%;
+    height: 18px;
+    margin-top: 10px;
+    background: url('progress-bar-full-light.png') no-repeat center;
+    border-radius: 9px; /* 設置圓角 */
+    transition: width 0.4s ease; /* 添加過渡效果 */
+}
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
